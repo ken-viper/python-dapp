@@ -17,7 +17,7 @@ public_key = Account.from_key(private_key)
 account_address = public_key.address
 
 # Contract instance
-contract_artifacts_file = json.load(open('./contracts/Greeter.json'))
+contract_artifacts_file = json.load(open('./contracts/Greeter.json')) 
 abi = contract_artifacts_file['abi']
 contract_address = os.environ.get('CONTRACT_ADDRESS')
 contract_instance = w3.eth.contract(abi=abi, address=contract_address)
